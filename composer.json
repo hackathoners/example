@@ -1,0 +1,7 @@
+{
+	"description": "Markup translator sample application",
+    "require": {
+        "slim/slim": "2.*",
+		"hackathoners/markup-translator": "dev-master"
+    }
+}
