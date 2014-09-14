@@ -1,7 +1,7 @@
 <?php
 $options = [];
 foreach($markups as $key => $name) {
-    $options = sprintf('<option value="%s">%s</option>', $key, $name);
+    $options[] = sprintf('<option value="%s">%s</option>', $key, $name);
 }
 $items = implode('', $options);
 ?>
