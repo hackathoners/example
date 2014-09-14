@@ -10,7 +10,7 @@ $app->get('/', function () use ($translator, $app) {
     ]);
 });
 
-$app->post('api/v1/translate', function () use ($app) {
+$app->post('/api/v1/translate', function () use ($app) {
     $app->response->headers->set('Content-Type', 'application/json');
     $result = Translator::translate(
         $app->request->post('text'),

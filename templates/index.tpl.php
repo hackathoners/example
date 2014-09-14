@@ -38,5 +38,20 @@ $items = implode('', $options);
             </form>
         </div>
     </div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#translate').click(function(event) {
+        event.preventDefault();
+        $.post('/api/v1/translate', {
+            from: $('#from').val(),
+            to: $('#to').val(),
+            text: $('#text').val(),
+        }, function (data) {
+            $('#result').val(data.result);
+        });
+    });
+});
+</script>
 </body>
 </html>
